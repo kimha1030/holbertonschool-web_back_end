@@ -2,8 +2,10 @@
 
 ## Resources
 
+- [Python Type Checking (Guide)](https://realpython.com/python-type-checking/)
+- [Using Python's Type Annotations](https://dev.to/dstarner/using-pythons-type-annotations-4cfe)
 - [Python 3 typing documentation](https://docs.python.org/3/library/typing.html)
-- [MyPy cheat sheet](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
+- [MyPy cheat sheet](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html) -[How to start using Python Type Annotations with Mypy](https://www.stackbuilders.com/tutorials/python/using-types-in-python-with-mypy/)
 
 ## General Objectives
 
