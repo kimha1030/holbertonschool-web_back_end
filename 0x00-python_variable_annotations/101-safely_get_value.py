@@ -7,7 +7,7 @@ unionTNone = Union[T, None]
 unionAnyT = Union[Any, T]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: unionTNone = None) -> unionAnyT:
+def safely_get_value(dct: Mapping, key: Any, default: unionTNone) -> unionAnyT:
     """ Function safely_get_value"""
     if key in dct:
         return dct[key]
