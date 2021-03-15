@@ -12,6 +12,7 @@ def to_kv(k: str, v: typing.Union[int, float]) -> typing.Tuple[str, float]:
             v (int or float): [integer or float used in tuple]
 
         Returns:
-            float: [tuple, where first element is string  and second element is the square of integer o float]
+            float: [tuple, where first element is string  and second
+            element is the square of integer o float]
         """
     return (k, v*v)
