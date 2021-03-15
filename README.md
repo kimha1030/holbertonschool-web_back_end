@@ -1,10 +1,12 @@
-<img align="right" width="15%" src="./holberton.png"/>
+<p align="center">
+  <img width="15%" src="./holberton.png"/>
+</p>
 
-## **Web Backend**
+# **Web Backend**
 
 Repository for second timester of Full Stack Web Development specialization.
 
-### **Topics:**
+## **Topics:**
 
 - Advanced Python
 - Advanced SQLAlchemy
