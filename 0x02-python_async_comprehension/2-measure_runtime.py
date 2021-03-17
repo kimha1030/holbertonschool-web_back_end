@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """measure_runtime"""
 
-import typing
 import asyncio
 import time
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime() -> typing.List[float]:
+async def measure_runtime() -> float:
     """[Coroutine that will execute async_comprehension four
         times in parallel using asyncio.gather and it shoul
         measure the total runtime]
