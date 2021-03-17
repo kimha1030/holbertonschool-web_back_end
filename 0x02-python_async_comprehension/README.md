@@ -6,6 +6,7 @@
 - [What’s New in Python: Asynchronous Comprehensions / Generators](http://www.blog.pythonlibrary.org/2017/02/14/whats-new-in-python-asynchronous-comprehensions-generators/)
 - [Type-hints for generators](https://stackoverflow.com/questions/42531143/type-hinting-generator-in-python-3-6)
 - [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/)
+- [Speeding Up Python with Concurrency, Parallelism, and asyncio](https://testdriven.io/blog/concurrency-parallelism-asyncio/)
 - [waiting in asyncio](https://hynek.me/articles/waiting-in-asyncio/)
 
 ## Learning Objectives
