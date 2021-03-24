@@ -4,11 +4,10 @@
 """
 import csv
 import math
-import typing
-from typing import List
+from typing import List, Tuple
 
 
-def index_range(page: int, page_size: int) -> typing.Tuple[int, int]:
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """ Function that returns a tuple of the start index and the end
         index for those particular pagination parameters."""
     num_page = page - 1
@@ -39,16 +38,18 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """ Method that takes two integer arguments page with default
             value 1 and page_size with default value 10."""
-        list_pages = []
         idx = index_range(page, page_size)
         idx_start = idx[0]
         idx_end = idx[1]
+
         res = self.dataset()
         assert type(page) == int and page > 0
         assert type(page_size) == int and page_size > 0
+
+        list_pages = []
         try:
             for i in range(idx_start, idx_end):
                 list_pages.append(res[i])
             return list_pages
         except IndexError:
-            return list_pages
+            return []
