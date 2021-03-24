@@ -1,9 +1,16 @@
 import csv
 import math
+import typing
 from typing import List
 
 
-index_range = __import__('0-simple_helper_function').index_range
+def index_range(page: int, page_size: int) -> typing.Tuple[int, int]:
+    """ Function that returns a tuple of the start index and the end
+        index for those particular pagination parameters."""
+    num_page = page - 1
+    idx_start = num_page * page_size
+    idx_end = page * page_size
+    return (idx_start, idx_end)
 
 
 class Server:
