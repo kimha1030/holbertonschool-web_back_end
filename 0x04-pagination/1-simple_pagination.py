@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+1-simple_pagination
+"""
 import csv
 import math
 import typing
