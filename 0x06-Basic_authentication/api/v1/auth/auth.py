@@ -28,10 +28,11 @@ class Auth():
         """method authorized header"""
         if request is None:
             return None
-        if request not in request.headers.get("Authorization"):
+        auth_header = request.headers.get('Authorization')
+        if not auth_header:
             return None
         else:
-            return request.headers.get("Authorization")
+            return auth_header
 
     def current_user(self, request=None) -> typing.TypeVar('User'):
         """method current user"""
