@@ -3,9 +3,10 @@
 ## Resources
 
 - [What Is PII, non-PII, and Personal Data?](https://piwik.pro/blog/what-is-pii-personal-data/)
-- [logging documentation](https://docs.python.org/3/library/logging.html)
-- [bcrypt package](https://github.com/pyca/bcrypt/)
-- [Logging to Files, Setting Levels, and Formatting](https://www.youtube.com/watch?v=-ARI4Cz-awo)
+- [Python and MySQL Database: A Practical Introduction](https://realpython.com/python-mysql/)
+- [Python Regular Expression Tutorial](https://www.datacamp.com/community/tutorials/python-regular-expression-tutorial)
+- [Python bcrypt tutorial](https://zetcode.com/python/bcrypt/)
+- [Password hashing in Python with Bcrypt](https://pythonise.com/categories/python/python-password-hashing-bcrypt)
 
 ## Learming objectives
 
