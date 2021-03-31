@@ -4,6 +4,8 @@ basic_auth.py
 """
 from api.v1.auth.auth import Auth
 import base64
+import typing
+from models.user import User
 
 
 class BasicAuth(Auth):
@@ -48,3 +50,20 @@ class BasicAuth(Auth):
             return None, None
         list_data = decoded_base64_authorization_header.split(':')
         return (list_data[0], list_data[1])
+
+    def user_object_from_credentials(self, user_email: str,
+                                     user_pwd: str) -> typing.TypeVar('User'):
+        """Method user object from credentials"""
+        if user_email is None or type(user_email) is not str:
+            return None
+        if user_pwd is None or type(user_pwd) is not str:
+            return None
+        try:
+            search_user = User.search({"email": user_email})
+        except Exception:
+            return None
+        for user in search_user:
+            if user.is_valid_password(user_pwd):
+                return user
+            else:
+                return None
