@@ -19,7 +19,7 @@ class BasicAuth(Auth):
         if type(authorization_header) is not str:
             return None
         if authorization_header.startswith("Basic "):
-            sec_word = authorization_header.split(' ')[1]
+            sec_word = authorization_header.split(" ", 1)[1]
             return sec_word
         else:
             return None
@@ -48,7 +48,7 @@ class BasicAuth(Auth):
             return None, None
         if ':' not in decoded_base64_authorization_header:
             return None, None
-        list_data = decoded_base64_authorization_header.split(':')
+        list_data = decoded_base64_authorization_header.split(':', 1)
         return (list_data[0], list_data[1])
 
     def user_object_from_credentials(self, user_email: str,
