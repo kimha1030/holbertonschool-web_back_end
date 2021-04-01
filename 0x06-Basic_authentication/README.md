@@ -16,11 +16,11 @@ In the industry, you should not implement your own Basic authentication system a
 
 ## Resources
 
-- REST API Authentication Mechanisms
-- Base64 in Python
-- HTTP header Authorization
-- Flask
-- Base64 - concept
+- [Flask: Before and After request Decorators](https://medium.com/innovation-incubator/flask-before-and-after-request-decorators-e639b06c2128)
+- [Token-Based Authentication With Flask](https://realpython.com/token-based-authentication-with-flask/)
+- [Python’s Requests Library (Guide)](https://realpython.com/python-requests/)
+- [Encoding and Decoding Base64](https://riptutorial.com/python/example/27070/encoding-and-decoding-base64)
+- [Python string methods](https://www.w3schools.com/python/python_ref_string.asp)
 
 # Simple API
 
