@@ -1,2 +1,5 @@
 requirements.txt
 __pycache__
+.DS_Store
+.vscode
+.db_User.json
