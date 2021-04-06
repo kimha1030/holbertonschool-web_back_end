@@ -20,10 +20,10 @@ def view_all_users() -> str:
 def view_one_user(user_id: str = None) -> str:
     """ GET /api/v1/users/:id
     Path parameter:
-      - User ID
+      - user_id
     Return:
       - User object JSON represented
-      - 404 if the User ID doesn't exist
+      - 404 if the user_id doesn't exist
     """
     if user_id is None:
         abort(404)

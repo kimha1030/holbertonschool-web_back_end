@@ -44,7 +44,7 @@ def forbidden(error) -> str:
 
 @app.before_request
 def before_request():
-    """ before_request handler
+    """ before request handler
     """
     path_list = ['/api/v1/status/', '/api/v1/unauthorized/',
                  '/api/v1/forbidden/']
