@@ -5,13 +5,15 @@ Database
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
 from user import Base
 from user import User
 
 
 class DB:
-
+    """ Class DB """
     def __init__(self):
+        """ Method consstructor """
         self._engine = create_engine("sqlite:///a.db", echo=True)
         Base.metadata.drop_all(self._engine)
         Base.metadata.create_all(self._engine)
@@ -19,6 +21,7 @@ class DB:
 
     @property
     def _session(self):
+        """ Method session """
         if self.__session is None:
             DBSession = sessionmaker(bind=self._engine)
             self.__session = DBSession()
