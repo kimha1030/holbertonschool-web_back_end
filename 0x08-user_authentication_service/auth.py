@@ -53,3 +53,12 @@ class Auth:
             return check_pwd
         except Exception:
             return False
+
+    def create_session(self, email: str) -> str:
+        """ Method that returns the session ID as a string """
+        try:
+            user = self._db.find_user_by(email=email)
+        except NoResultFound:
+            return None
+        self._db.update_user(user.id, session_id=_generate_uuid())
+        return user.session_id
