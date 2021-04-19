@@ -70,5 +70,18 @@ def profile() -> str:
         abort(403)
 
 
+@app.route('/reset_password', methods=['POST'], strict_slashes=False)
+def get_reset_password_token() -> str:
+    """ Method that search email field in form data. If email does not exist,
+        the response is 403 HTTP status. Otherwise, generate a token and
+        respond with a 200 HTTP status and JSON payload."""
+    email = request.form.get("email")
+    if not email:
+        abort(403)
+    else:
+        new_token = AUTH.get_reset_password_token(email)
+        return jsonify({"email": email, "reset_token": new_token}), 200
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
