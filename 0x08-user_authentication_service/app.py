@@ -57,5 +57,18 @@ def logout():
         abort(403)
 
 
+@app.route('/profile', methods=['GET'], strict_slashes=False)
+def profile() -> str:
+    """ Method that finds the user with session_id, If the user exist,
+        respond with a 200 HTTP status and JSON payload. Otherwise,
+        the response is 403 HTTP status """
+    session_id = request.cookies.get("session_id")
+    user_found = AUTH.get_user_from_session_id(session_id)
+    if user_found:
+        return jsonify({"email": user_found.email}), 200
+    else:
+        abort(403)
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
