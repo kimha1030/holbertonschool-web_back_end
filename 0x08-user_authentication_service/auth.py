@@ -73,3 +73,11 @@ class Auth:
             return user_found
         except Exception:
             return None
+
+    def destroy_session(self, user_id: int) -> None:
+        """ Method takes a single user_id integer
+            argument and returns None """
+        if user_id is None:
+            return None
+        else:
+            self._db.update_user(user_id, session_id=None)
