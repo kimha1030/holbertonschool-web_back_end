@@ -76,11 +76,11 @@ def get_reset_password_token() -> str:
         the response is 403 HTTP status. Otherwise, generate a token and
         respond with a 200 HTTP status and JSON payload."""
     email = request.form.get("email")
-    if not email:
-        abort(403)
-    else:
+    if email:
         new_token = AUTH.get_reset_password_token(email)
         return jsonify({"email": email, "reset_token": new_token}), 200
+    else:
+        abort(403)
 
 
 if __name__ == "__main__":
