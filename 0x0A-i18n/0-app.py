@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'], strict_slashes=False)
 def welcome_msg():
-    """ Method index"""
+    """ Method welcome_msg """
     return render_template("0-index.html")
 
 
