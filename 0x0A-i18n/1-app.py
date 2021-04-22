@@ -23,7 +23,7 @@ app.config.from_object("1-app.Config")
 @app.route('/', methods=['GET'], strict_slashes=False)
 def welcome_msg():
     """ Method welcome_msg """
-    return render_template("0-index.html")
+    return render_template("1-index.html")
 
 
 if __name__ == "__main__":
