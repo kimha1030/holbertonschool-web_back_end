@@ -1,6 +1,6 @@
 -- Task 5
 -- Creates a trigger that resets the attribute valid_email only when the email has been changed.
-DELIMITER | 
+DELIMITER $$
 CREATE TRIGGER updateEmail
 BEFORE UPDATE ON users
 FOR EACH ROW
@@ -9,5 +9,6 @@ BEGIN
     THEN
       SET NEW.valid_email = 0;
   END IF;
-END;
-|
+END$$
+
+DELIMITER ;
