@@ -1,4 +1,4 @@
-export default function updateStudentGradeByCity (arrayObjs, city, newGrades) {
+export default function updateStudentGradeByCity(arrayObjs, city, newGrades) {
   const filterStudents = arrayObjs.filter((i) => i.location === city);
   return filterStudents.map((i) => {
     const newGrade = newGrades.filter((j) => j.studentId === i.id);
@@ -14,3 +14,4 @@ export default function updateStudentGradeByCity (arrayObjs, city, newGrades) {
     };
   });
 }
+
