@@ -5,6 +5,7 @@ function countStudents(pathArg) {
     const info = fs.readFileSync(pathArg, 'utf-8');
     const strLine = info.toString().split('\n');
     const studList = {};
+
     for (let i = 1; i < strLine.length - 1; i++) {
       const word = strLine[i].split(',');
       if (studList[word[3]]) {
