@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = function countStudents(pathArg) {
+module.exports = function countStudents (pathArg) {
   try {
     const info = fs.readFileSync(pathArg, 'utf-8');
     const strLine = info.toString().split('\n');
@@ -14,7 +14,7 @@ module.exports = function countStudents(pathArg) {
         studList[word[3]] = { numStudents: 1, nameStudents: [`${word[0]}`] };
       }
     }
-    const totalStudents = strLine.length - 2; //Menos encabezado y ultima fila
+    const totalStudents = strLine.length - 2; // Menos encabezado y ultima fila
     console.log(`Number of students: ${totalStudents}`);
     for (const s in studList) {
       console.log(
