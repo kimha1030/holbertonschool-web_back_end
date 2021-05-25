@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (pathArg) {
+function countStudents(pathArg) {
   try {
     const info = fs.readFileSync(pathArg, 'utf-8');
     const strLine = info.toString().split('\n');
@@ -18,7 +18,7 @@ function countStudents (pathArg) {
     console.log(`Number of students: ${totalStudents}`);
     for (const s in studList) {
       console.log(
-        `Number of students in ${s}: ${studList[s].numStudents}. List: ${studList[s].nameStudents}`
+        `Number of students in ${s}: ${studList[s].numStudents}. List: ${studList[s].nameStudents}`,
       );
     }
   } catch (e) {
