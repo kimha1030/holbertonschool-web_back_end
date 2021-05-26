@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./2-calcul_chai');
 
 describe('test_chai_sum_calculateNumber', () => {
   it('sum with different number of arguments', () => {
