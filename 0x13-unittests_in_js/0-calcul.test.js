@@ -1,7 +1,12 @@
-const assert = require('assert').strict;
-const calculateNumber = require('./0-calcul.js');
+const assert = require('assert');
+const calculateNumber = require('./0-calcul');
 
-describe('test calculateNumber', () => {
+describe('test_calculateNumber', () => {
+  it('sum with different number of arguments', () => {
+    assert.equal(isNaN(calculateNumber()), true);
+    assert.equal(isNaN(calculateNumber(4)), true);
+    assert.equal(calculateNumber(1, 2, 3), 3);
+  });
   it('sum two integers', () => {
     assert.equal(calculateNumber(1, 3), 4);
   });
@@ -16,8 +21,9 @@ describe('test calculateNumber', () => {
   });
   it('sum with zero', () => {
     assert.equal(calculateNumber(1.6, 0), 2);
+    assert.equal(calculateNumber(0.3, 0), 0);
   });
-  it('sum with a single argument', () => {
-    assert.equal(isNaN(calculateNumber(4)), true);
+  it('sum two negative numbers', () => {
+    assert.equal(calculateNumber(-1.9, -7.7), -10);
   });
 });
