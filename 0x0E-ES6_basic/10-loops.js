@@ -4,5 +4,5 @@ export default function appendToEachArrayValue(array, appendString) {
     avalues.push(appendString + value);
   }
 
-  return array;
+  return avalues;
 }
