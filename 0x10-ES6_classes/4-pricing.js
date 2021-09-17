@@ -15,7 +15,9 @@ class Pricing {
   }
 
   set currency(currency) {
-    this._currency = currency;
+    if (currency instanceof Currency) {
+      this._currency = currency;
+    }
   }
 
   get currency() {
