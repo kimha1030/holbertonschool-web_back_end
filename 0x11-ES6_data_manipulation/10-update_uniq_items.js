@@ -1,7 +1,7 @@
 export default function updateUniqueItems(map) {
   if (map instanceof Map) {
-    for (const k of map) {
-      if (map.get(k) === 1) {
+    for (const [k, v] of map.entries()) {
+      if (v === 1) {
         map.set(k, 100);
       }
     }
