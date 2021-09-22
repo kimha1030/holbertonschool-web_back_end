@@ -4,11 +4,15 @@ export default function cleanSet(set, startString) {
     return valStr;
   }
   set.forEach((i) => {
-    if (i.includes(startString)) {
-      valStr = valStr.concat(`-${i.replace(startString, '')}`);
+    if (i && i.startsWith(startString)) {
+      let sum = '';
+      if (valStr.length === 0) {
+        sum = i.replace(startString, '');
+      } else {
+        sum = i.replace(startString, '-');
+      }
+      valStr += sum;
     }
   });
-  valStr = valStr.substring(1);
-
   return valStr;
 }
