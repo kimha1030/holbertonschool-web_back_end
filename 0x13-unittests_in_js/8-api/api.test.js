@@ -3,17 +3,14 @@ const { expect } = require('chai');
 const request = require('request');
 
 describe('route GET /', () => {
-  describe('GET', () => {
+  it('test for response of get request', () => {
     const params = {
       url: 'https://localhost:7865',
       method: 'GET',
-      }
-
-    it('test for response of get request', (done) => {      
-      request(params, function(error, response, body) {
-        expect(response.statusCode).to.equal(200);
-        expect(body).to.equal('Welcome to the payment system');
-      });
+    };
+    request(params, (_error, response, body) => {
+      expect(response.statusCode).to.equal(200);
+      expect(body).to.equal('Welcome to the payment system');
     });
   });
 });
