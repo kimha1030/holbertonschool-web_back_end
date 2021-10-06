@@ -15,7 +15,7 @@ function setNewSchool(schoolName, value) {
     client.set(schoolName, value, redis.print)
 }
 
-function displaySchoolValue(schoolName) {
+async function displaySchoolValue(schoolName) {
     const res = await prom(schoolName);
     console.log(res);
 }
