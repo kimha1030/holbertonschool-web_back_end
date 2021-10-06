@@ -1,5 +1,12 @@
 # 0x14. Queuing System in JS
 
+## Resources
+* [NodeRedis](https://github.com/NodeRedis/node-redis)
+* [Redis - Backup](https://www.tutorialspoint.com/redis/redis_backup.htm)
+* [Error when starting Redis server](https://askubuntu.com/questions/949119/error-when-starting-redis-server-address-already-in-use)
+* [Node-Redis psubscribe with custom messages](https://stackoverflow.com/questions/29811862/node-redis-psubscribe-with-custom-messages)
+* [Implementing Redis Pub/Sub in Node.js Application](https://cloudnweb.dev/2019/08/implementing-redis-pub-sub-in-node-js-application/)
+
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 - How to run a Redis server on your machine
