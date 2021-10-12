@@ -1,5 +1,4 @@
-import redis from 'redis';
-import { createClient } from 'redis';
+import { createClient, print } from 'redis';
 
 const client = createClient();
 client.on('connect', () => {
@@ -10,7 +9,7 @@ client.on('error', (err) => {
 });
 
 function setNewSchool(schoolName, value) {
-    client.set(schoolName, value, redis.print)
+    client.set(schoolName, value, print)
 }
 
 function displaySchoolValue(schoolName) {
