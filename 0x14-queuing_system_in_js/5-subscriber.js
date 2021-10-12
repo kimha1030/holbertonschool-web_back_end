@@ -8,7 +8,7 @@ client.on('connect', () => {
 client.on('error', (err) => {
     console.log('Redis client not connected to the server:', err);
 });
-client.subscribe('holberton school channel');
+
 client.on('message', (message, channel) => {
     if (channel == 'holberton school channel') {
         console.log(message);
@@ -18,3 +18,4 @@ client.on('message', (message, channel) => {
         client.quit();
     }
 });
+client.subscribe('holberton school channel');
